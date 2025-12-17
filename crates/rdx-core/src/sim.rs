@@ -33,8 +33,9 @@ pub fn init_agents(cfg: &SimConfig) -> SimState {
         }
 
         let beta = beta_from_alpha_to_base(&alpha_to_base, cfg.base_good, 1e-6);
+        let reaction_rules = cfg.reaction_rules.to_vec().clone(); // TODO: generate random agent's reaction rules
 
-        agents.push(Agent { e, beta, alpha_to_base });
+        agents.push(Agent { e, beta, alpha_to_base , reaction_rules});
     }
 
     SimState { agents, events: Vec::new() }

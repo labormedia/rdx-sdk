@@ -15,3 +15,4 @@ pub mod pareto_oracle;
 pub mod preferences;
 pub mod trade;
 pub mod sim;
+pub mod reaction;
